@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 
 class HelloWorld() : BuildType({
 
-    name = "Hello World bc"
+    name = "Hello World"
     description = "Test buildConfig"
     id ("test_HelloWorld")
 
