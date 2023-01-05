@@ -15,8 +15,6 @@ project {
 
     params {
         param("teamcity.ui.settings.readOnly", "true")
-//        password("env.AWS_ACCESS_KEY_ID", "credentialsJSON:aws-access-key-id", display = ParameterDisplay.HIDDEN)
-//        password("env.AWS_ACCESS_KEY", "credentialsJSON:aws-access-key", display = ParameterDisplay.HIDDEN)
     }
 
     buildType(HelloWorld())
