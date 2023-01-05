@@ -29,7 +29,7 @@ project {
                 awsRegionName = awsRegion
             }
             accessKeyID = awsAccessKeyId
-            accessKey = accessKey
+            accessKey = awsAccessKey
         }
         activeStorage {
             id = "PROJECT_EXT_3"
