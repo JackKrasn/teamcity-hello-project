@@ -10,11 +10,13 @@ project {
 
     val awsRegion = DslContext.getParameter("AWS_REGION",)
     val s3Bucket = DslContext.getParameter("S3_BUCKET",)
+    val awsAccessKeyId = DslContext.getParameter("AWS_ACCESS_KEY_ID")
+    val awsAccessKey = DslContext.getParameter("AWS_ACCESS_KEY")
 
     params {
         param("teamcity.ui.settings.readOnly", "true")
-        password("env.AWS_ACCESS_KEY_ID", "credentialsJSON:aws-access-key-id", display = ParameterDisplay.HIDDEN)
-        password("env.AWS_ACCESS_KEY", "credentialsJSON:aws-access-key", display = ParameterDisplay.HIDDEN)
+//        password("env.AWS_ACCESS_KEY_ID", "credentialsJSON:aws-access-key-id", display = ParameterDisplay.HIDDEN)
+//        password("env.AWS_ACCESS_KEY", "credentialsJSON:aws-access-key", display = ParameterDisplay.HIDDEN)
     }
 
     buildType(HelloWorld())
@@ -26,8 +28,8 @@ project {
             awsEnvironment = default {
                 awsRegionName = awsRegion
             }
-            accessKeyID = "%env.AWS_ACCESS_KEY_ID%"
-            accessKey = "%env.AWS_ACCESS_KEY%"
+            accessKeyID = awsAccessKeyId
+            accessKey = accessKey
         }
         activeStorage {
             id = "PROJECT_EXT_3"
