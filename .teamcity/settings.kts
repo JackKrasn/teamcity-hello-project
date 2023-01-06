@@ -9,7 +9,7 @@ project {
     description = "Issue from JetBrains"
 
     val awsRegion = DslContext.getParameter("AWS_REGION",)
-    val s3Bucket = DslContext.getParameter("S3_BUCKET",)
+    val s3Bucket = DslContext.getParameter("S3_BUCKET","teamcity-art-bucket")
     val awsAccessKeyId = DslContext.getParameter("AWS_ACCESS_KEY_ID")
     val awsAccessKey = DslContext.getParameter("AWS_ACCESS_KEY")
 
